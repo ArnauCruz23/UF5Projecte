@@ -21,19 +21,18 @@ public class MatcherImpl implements Matcher {
                     && candidatos.get(x).getOrientacionSexual() == OrientacionSexual.GAY){
                 aux = candidatos.get(x);
             }
-            else if(persona.getSexo() == Sexo.HOMBRE && persona.getOrientacionSexual() == OrientacionSexual.BISEXUAL
-                    && candidatos.get(x).getOrientacionSexual() == OrientacionSexual.HETERO){
+            else if((persona.getSexo() == Sexo.HOMBRE && persona.getOrientacionSexual() == OrientacionSexual.BISEXUAL)
+                    && (candidatos.get(x).getOrientacionSexual() == OrientacionSexual.HETERO && candidatos.get(x).getSexo()== Sexo.MUJER)){
                 aux = candidatos.get(x);
             }
             else if(persona.getSexo() == Sexo.MUJER && persona.getOrientacionSexual() == OrientacionSexual.BISEXUAL
                     && candidatos.get(x).getOrientacionSexual() == OrientacionSexual.LESBIANA){
                 aux = candidatos.get(x);
             }
-            else if(persona.getSexo() == Sexo.MUJER && persona.getOrientacionSexual() == OrientacionSexual.BISEXUAL
-                    && candidatos.get(x).getOrientacionSexual() == OrientacionSexual.HETERO){
+            else if((persona.getSexo() == Sexo.MUJER && persona.getOrientacionSexual() == OrientacionSexual.BISEXUAL)
+                    && (candidatos.get(x).getOrientacionSexual() == OrientacionSexual.HETERO && candidatos.get(x).getSexo()== Sexo.HOMBRE))
                 aux = candidatos.get(x);
             }
-        }
         
         return aux;
         
