@@ -20,11 +20,7 @@ public class Persona {
         this.orientacionPolitica = orientacionPolitica;
     }
 
-    Persona(int i, Sexo sexo, int i0, boolean b, OrientacionSexual orientacionSexual, Formacion formacion) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-
+    
     public int getId() {
         return id;
     }
