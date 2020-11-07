@@ -27,7 +27,7 @@ public class ERxerciciMain{
        Persona aux = new Persona(5, Sexo.MUJER, 39, false, OrientacionSexual.BISEXUAL, Formacion.GRADO_SUPERIOR, OrientacionPolitica.EXTREMA_IZQUIERDA);      
        MatcherImpl m = new MatcherImpl(aux, candidatos);
        
-       System.out.println("La parella compatible es => "+ m.matches(aux, candidatos)+" amb "+aux);
+       System.out.println("La parella compatible es => "+ m.matches(m.getPersona(), m.getCandidatos())+" amb "+aux);
        
     }
     

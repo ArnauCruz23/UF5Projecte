@@ -33,6 +33,7 @@ public class MatcherImpl implements Matcher {
                     && (candidatos.get(x).getOrientacionSexual() == OrientacionSexual.HETERO && candidatos.get(x).getSexo()== Sexo.HOMBRE))
                 aux = candidatos.get(x);
             }
+            
         
         return aux;
         
