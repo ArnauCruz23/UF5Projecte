@@ -34,15 +34,15 @@ public class MatcherImpl implements Matcher {
                             aux = candidatos.get(x);
                         }
                     }
-                }else{
-                    if(sexualitat(candidatos.get(x), persona) == true){
-                        if(politica(candidatos.get(x), persona) == true){
-                            aux = candidatos.get(x);
+                    }else{
+                        if(sexualitat(candidatos.get(x), persona) == true){
+                            if(politica(candidatos.get(x), persona) == true){
+                                aux = candidatos.get(x);
+                            }
+                            else{
+                                aux = candidatos.get(x);
+                            }
                         }
-                        else{
-                            aux = candidatos.get(x);
-                        }
-                    }
                 }
             }else{
                 if(candidatos.get(x).isFumador() == true && persona.isFumador() == true){
