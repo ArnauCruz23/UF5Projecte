@@ -14,7 +14,7 @@ public class MatcherImpl implements Matcher {
         
         for(int x = 0; x < candidatos.size(); x++){
             
-            if(candidatos.get(x).getEdad() <= persona.getEdad()+5){
+            if(candidatos.get(x).getEdad() <= persona.getEdad()-5){
                 if(candidatos.get(x).isFumador() == true && persona.isFumador() == true){
                     if(sexualitat(candidatos.get(x), persona) == true){
                         if(politica(candidatos.get(x), persona) == true){
