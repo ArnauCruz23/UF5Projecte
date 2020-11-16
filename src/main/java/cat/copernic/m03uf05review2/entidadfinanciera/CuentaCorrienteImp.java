@@ -12,7 +12,7 @@ public abstract class CuentaCorrienteImp implements CuentaCorriente{
     @Override
     public void ingresa(double ingreso) {
         
-        if(ingreso >= 1){
+        if(ingreso >= 0.01){
             saldo += ingreso;
         }
         else if(ingreso == 0){
