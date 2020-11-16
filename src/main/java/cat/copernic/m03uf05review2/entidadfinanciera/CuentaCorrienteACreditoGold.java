@@ -34,7 +34,7 @@ public class CuentaCorrienteACreditoGold extends CuentaCorrienteCredito{
             }
             else{
                 try {
-                    throw new Exception("No tens suficient Debit");
+                    throw new Exception("Has superat el descobert de 3000");
                 } catch (Exception ex) {
                     Logger.getLogger(CuentaCorrienteACreditoGold.class.getName()).log(Level.SEVERE, null, ex);
                 }
