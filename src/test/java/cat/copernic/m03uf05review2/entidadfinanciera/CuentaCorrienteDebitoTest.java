@@ -77,21 +77,13 @@ public class CuentaCorrienteDebitoTest {
        
     }
     
-    @Test(expected = AssertionError.class)
-    public void testIngresarError() {
-        CuentaCorrienteImp w = new CuentaCorrienteDebito(1000, "Quintero");
-        
-        w.abona(10000);
-        assertEquals(0, w.getSaldo(),2);
-      
-    }
     
     @Test(expected = AssertionError.class)
     public void testIngresarErrorNegativo() {
         CuentaCorrienteImp w = new CuentaCorrienteDebito(1000, "Quintero");
         
-        w.abona(-10000);
-        assertEquals(0, w.getSaldo(),2);
+        w.ingresa(-10000);
+        assertEquals(-9000, w.getSaldo(),2);
       
     }
     
@@ -99,7 +91,7 @@ public class CuentaCorrienteDebitoTest {
     public void testIngresarErrorCero() {
         CuentaCorrienteImp w = new CuentaCorrienteDebito(1000, "Quintero");
         
-        w.abona(0);
+        w.ingresa(0);
         assertEquals(0, w.getSaldo(),2);
       
     }
