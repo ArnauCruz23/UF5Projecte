@@ -58,16 +58,19 @@ public class CalculadoraDeFraccionesTest {
     
     @Test
     public void testResta() {
-        assertEquals(new Fraccion(12.0, 9.0), instance.resta());
+        assertEquals(new Fraccion(0.0, 9.0), instance.resta());
     }
     
     @Test
     public void testMultiplicar() {
-        
+        assertEquals(new Fraccion(4.0, 9.0), instance.multiplicar());
     }
     
     @Test
     public void testDivisio() {
+        
+        assertEquals(new Fraccion(1.0, 1.0), instance.dividir());
+        
         
     }
     

@@ -50,8 +50,8 @@ public class CalculadoraDeFracciones {
      *
      */
     public Fraccion dividir() {
-        return new Fraccion(operador1.getNumerador() * operador2.getDenominador(), 
-                            operador1.getDenominador() * operador2.getNumerador());
+        return simplify(new Fraccion(operador1.getNumerador() * operador2.getDenominador(), 
+                            operador1.getDenominador() * operador2.getNumerador()));
     }
     /**
      * Maximo comun divisor, el numero mas grande que divide dos numeros
