@@ -41,21 +41,21 @@ public abstract class CuentaCorrienteImp implements CuentaCorriente{
         this.titular = titular;
     }
 
-    public void setSaldo(double saldo) {
+    /*public void setSaldo(double saldo) {
         this.saldo = saldo;
     }
 
     public void setTitular(String titular) {
         this.titular = titular;
-    }
+    }*/
 
-    /*public double getSaldo() {
+    public double getSaldo() {
         return saldo;
     }
 
     public String getTitular() {
         return titular;
-    }*/
+    }
     
     
     @Override
