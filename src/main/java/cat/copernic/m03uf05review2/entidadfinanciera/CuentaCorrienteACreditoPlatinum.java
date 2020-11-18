@@ -28,8 +28,8 @@ public class CuentaCorrienteACreditoPlatinum extends CuentaCorrienteCredito{
         }
         else{
         
-            if(getSaldo()+5000 >= abono){
-                setSaldo(getSaldo() - abono); 
+            if(this.saldo+5000 >= abono){
+                this.saldo = this.saldo - abono; 
             }
             else{
                 try {

@@ -5,7 +5,7 @@ import java.util.logging.Logger;
 
 public abstract class CuentaCorrienteImp implements CuentaCorriente{
     
-    private double saldo;
+    protected double saldo;
     private String titular;
     
     
@@ -49,13 +49,13 @@ public abstract class CuentaCorrienteImp implements CuentaCorriente{
         this.titular = titular;
     }
 
-    public double getSaldo() {
+    /*public double getSaldo() {
         return saldo;
     }
 
     public String getTitular() {
         return titular;
-    }
+    }*/
     
     
     @Override

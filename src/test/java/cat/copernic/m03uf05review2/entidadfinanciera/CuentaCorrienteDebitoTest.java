@@ -9,6 +9,8 @@ import static org.junit.Assert.*;
 
 public class CuentaCorrienteDebitoTest {
     
+    private CuentaCorrienteImp instance;
+    
     //Aquest metede s'executa abans de tots els tests
     @BeforeClass
     public static void setUpClass() {
@@ -24,75 +26,63 @@ public class CuentaCorrienteDebitoTest {
     //Aquest metode s'executa al final de tots els tests 
     @Before
     public void setUp() {
+        instance = new CuentaCorrienteDebito(1000, "Ramón");
     }
     
     //Aquest metode s'executa al principi
     @After
     public void tearDown() {
+        instance = null;
     }
     
     @Test
     public void testAbona() {
-        CuentaCorrienteImp d = new CuentaCorrienteDebito(1000, "Quintero");
-        
-        d.abona(500);
-        assertEquals(500, d.getSaldo(),2);        
+        instance.abona(500);
+        assertEquals(500, instance.getSaldo(),2);        
        
     }
     
     
     @Test(expected = AssertionError.class)
     public void testAbonaErrorMes() {
-        CuentaCorrienteImp w = new CuentaCorrienteDebito(1000, "Quintero");
-        
-        w.abona(10000);
-        assertEquals(0, w.getSaldo(),2);
+        instance.abona(10000);
+        assertEquals(0, instance.getSaldo(),2);
       
     }
     
     @Test(expected = AssertionError.class)
     public void testAbonaErrorNegatiu() {
-        CuentaCorrienteImp w = new CuentaCorrienteDebito(1000, "Quintero");
-        
-        w.abona(-1000);
-        assertEquals(0, w.getSaldo(),2);
+        instance.abona(-1000);
+        assertEquals(0, instance.getSaldo(),2);
       
     }
     
     @Test(expected = AssertionError.class)
     public void testAbonaErrorCero() {
-        CuentaCorrienteImp w = new CuentaCorrienteDebito(1000, "Quintero");
-        
-        w.abona(0);
-        assertEquals(0, w.getSaldo(),2);
+        instance.abona(0);
+        assertEquals(0, instance.getSaldo(),2);
       
     }
     
     @Test
     public void testIngresa() {
-        CuentaCorrienteImp e = new CuentaCorrienteDebito(1000, "Quintero");
-        
-        e.ingresa(1000);
-        assertEquals(2000, e.getSaldo(),2);        
+        instance.ingresa(1000);
+        assertEquals(2000, instance.getSaldo(),2);        
        
     }
     
     
     @Test(expected = AssertionError.class)
     public void testIngresarErrorNegativo() {
-        CuentaCorrienteImp w = new CuentaCorrienteDebito(1000, "Quintero");
-        
-        w.ingresa(-10000);
-        assertEquals(-9000, w.getSaldo(),2);
+        instance.ingresa(-10000);
+        assertEquals(-9000, instance.getSaldo(),2);
       
     }
     
     @Test(expected = AssertionError.class)
     public void testIngresarErrorCero() {
-        CuentaCorrienteImp w = new CuentaCorrienteDebito(1000, "Quintero");
-        
-        w.ingresa(0);
-        assertEquals(0, w.getSaldo(),2);
+        instance.ingresa(0);
+        assertEquals(0, instance.getSaldo(),2);
       
     }
     

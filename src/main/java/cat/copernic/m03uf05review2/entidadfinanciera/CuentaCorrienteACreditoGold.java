@@ -29,8 +29,8 @@ public class CuentaCorrienteACreditoGold extends CuentaCorrienteCredito{
             }
         }else{
         
-            if(getSaldo()+3000 >= abono){
-                setSaldo(getSaldo() - abono); 
+            if(this.saldo+3000 >= abono){
+                this.saldo = this.saldo - abono; 
             }
             else{
                 try {

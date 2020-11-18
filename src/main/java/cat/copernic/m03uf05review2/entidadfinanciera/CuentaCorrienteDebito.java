@@ -26,8 +26,8 @@ public class CuentaCorrienteDebito extends CuentaCorrienteImp {
         }
         else{
         
-            if(getSaldo() >= abono){
-                setSaldo(getSaldo() - abono); 
+            if(this.saldo >= abono){
+                this.saldo = this.saldo - abono; 
             }
             else{
                 try {
